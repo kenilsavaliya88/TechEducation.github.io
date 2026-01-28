@@ -1,0 +1,898 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #0a2540;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+	align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+	align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+	align-items: center;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0a2540, #1b4f72);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #00d4ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00b8e6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+}
+
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0a2540;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 100;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #00d4ff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.why-choose {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.why-choose h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.why-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    background: #f9f9f9;
+    padding: 25px;
+    width: 280px;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+}
+
+.learning-path {
+    padding: 70px 20px;
+    background-color: #f1f7fb;
+    text-align: center;
+}
+.learning-path h2 {
+	margin-bottom : 20px;
+}
+
+.path-steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    width: 230px;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.step span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color:#1b4f72;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.stat-box h3 {
+    font-size: 32px;
+    color: #00d4ff;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 8px 18px;
+    background-color: #00d4ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    background-color: #00b8e6;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+    animation: scaleIn 0.4s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Forms */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.switch {
+    color: #00d4ff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+.auth-text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#modalTitle {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Parent li */
+.nav-links li.has-mega {
+    position: relative;
+}
+
+/* Mega menu */
+.mega-menu {
+    position: absolute;
+    top: 100%; /* directly below parent li */
+    left: 0;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    min-width: 250px; /* prevent super narrow */
+}
+
+/* Columns */
+.mega-column {
+    flex: 1 1 200px;
+}
+
+/* Headings */
+.mega-column h3 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Links */
+.mega-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-column ul li {
+    margin-bottom: 8px;
+}
+
+.mega-column ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.mega-column ul li a:hover {
+    color: #00d4ff;
+}
+
+/* Hover effect */
+.nav-links li.has-mega:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile */
+@media screen and (max-width: 900px) {
+    .mega-menu {
+        flex-direction: column;
+        width: 90vw;
+        padding: 15px;
+    }
+    .mega-column {
+        flex: 1 1 100%;
+    }
+}
+/* forgot-password */
+.forgot-password {
+    color: #00d4ff;
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    color: #007bbf;
+}
+
+.forgot-password-modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.forgot-password-modal .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.forgot-password-modal .modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.forgot-password-modal .modal-content button {
+    background-color: #00d4ff;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgot-password-modal .modal-content button:hover {
+    background-color: #007bbf;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+
+    background-color: #1b4f72;
+    color: white;
+	position: fixed;   /* Makes it stay in place */
+    top: 0;            /* Stick to top */
+    left: 0;           /* Stick to left side */
+    width: 220px;      /* Adjust width */
+    height: 100vh;     /* Full viewport height */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    overflow-y: auto;  /* Scroll inside sidebar if items overflow */
+    z-index: 1000;     /* Stay above main content */
+
+}
+
+.sidebar-logo h2 {
+    color: #00d4ff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #ccc;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+    background-color: #00d4ff;
+    color: white;
+}
+
+/* Main Content */
+.dashboard-main {
+    flex: 1;
+    margin-left: 240px; /* Leave space for fixed sidebar */
+    padding: 20px;
+}
+
+/* Header */
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.dashboard-header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #00d4ff;
+}
+
+/* Courses Table */
+.courses-table {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.courses-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.courses-table th,
+.courses-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.courses-table th {
+    color: #00d4ff;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .dashboard-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .sidebar-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .dashboard-cards {
+        flex-direction: column;
+    }
+}
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.course-cards .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.course-cards .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course-cards .card h3 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.course-cards .card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.course-cards .enroll-btn {
+    background-color: #00d4ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.course-cards .enroll-btn:hover {
+    background-color: #007bbf;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.course-cards .card img {
+    width: 100%;         /* make image span card width */
+    height: 150px;       /* fix height to match all cards */
+    object-fit: contain;  /* scale image without stretching */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.testimonials {
+    background: #f0f8ff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #00d4ff;
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    display: inline-block;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.featured-courses {
+    padding: 50px 20px;
+    background-color: #f7f9fc;
+    text-align: center;
+}
+
+.featured-courses h2 {
+    color: #00d4ff;
+    margin-bottom: 30px;
+}
+
+.featured-courses-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.featured-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.featured-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #f0f8ff;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-info .enroll-btn {
+    background-color: #00d4ff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card-info .enroll-btn:hover {
+    background-color: #009acb;
+}
+
+.dashboard-footer {
+    background-color: #1b1f38;
+    color: #fff;
+    padding: 40px 20px 20px 20px;
+    font-family: Arial, sans-serif;
+	position: relative;   /* ensure stacking */
+    z-index: 10;
+    width: 100%;
+	text-align:center;
+	
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+	padding-left: 200px; /* <-- Add left padding to avoid sidebar overlap */
+    box-sizing: border-box;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #00d4ff;
+    margin-bottom: 15px;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #00d4ff;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+	transition: filter 0.3s ease;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid  rgba(193, 212, 232, 0.3);
+    padding-top: 15px;
+    font-size: 13px;
+    color: #9bb8d3;
+	padding-left: 260px; /* Align with footer-container */
+	box-sizing: border-box;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    .social-icons a {
+        margin: 0 8px;
+    }
+}

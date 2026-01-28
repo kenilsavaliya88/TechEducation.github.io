@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduTech</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<!-- Dashboard Page -->
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-logo">
+            <h2>EduTech</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">My Courses</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Grades</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Top Header -->
+        <div class="dashboard-header">
+            <h1>Welcome, Student!</h1>
+            <p>Here’s your personalized learning dashboard.</p>
+        </div>
+		<section class="featured-courses">
+    <h2>Featured Courses</h2>
+    <div class="featured-courses-container">
+
+        <div class="featured-card">
+            <img src="images/python.png" alt="HTML & CSS">
+            <div class="card-info">
+                <h3>Python</h3>
+                <p>Build modern, responsive websites from scratch.</p>
+                <button class="enroll-btn">Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="featured-card">
+            <img src="images/javascript.png" alt="JavaScript">
+            <div class="card-info">
+                <h3>JavaScript Basics</h3>
+                <p>Learn the core of web interactivity and programming.</p>
+                <button class="enroll-btn">Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="featured-card">
+            <img src="images/react.png" alt="React.js">
+            <div class="card-info">
+                <h3>React.js</h3>
+                <p>Create powerful single-page applications using React.</p>
+                <button class="enroll-btn">Enroll Now</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- Cards Section -->
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Enrolled Courses</h3>
+                <p>5 Courses</p>
+            </div>
+            <div class="card">
+                <h3>Pending Assignments</h3>
+                <p>3 Tasks</p>
+            </div>
+            <div class="card">
+                <h3>Upcoming Exams</h3>
+                <p>2 Exams</p>
+            </div>
+        </div>
+
+		<section class="course-cards">
+			
+    <!-- Web Development -->
+    
+    <div class="card">
+        <img src="images/html-5.png" alt="HTML & CSS">
+        <h3>HTML & CSS</h3>
+        <p>Learn to build beautiful websites from scratch.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/javascript.png" alt="JavaScript Basics">
+        <h3>JavaScript Basics</h3>
+        <p>Start programming with JavaScript fundamentals.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/react.png" alt="React.js">
+        <h3>React.js</h3>
+        <p>Build interactive web applications with React.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/nodejs.png" alt="Node.js">
+        <h3>Node.js</h3>
+        <p>Learn backend development using Node.js.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/full.png" alt="Fullstack Projects">
+        <h3>Fullstack Projects</h3>
+        <p>Apply your skills by building fullstack projects.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <!-- Data Science -->
+    <div class="card">
+        <img src="images/python.png" alt="Python">
+        <h3>Python</h3>
+        <p>Learn Python programming for data analysis and AI.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/numpy.png" alt="Pandas & NumPy">
+        <h3>Pandas & NumPy</h3>
+        <p>Work with data efficiently using Pandas and NumPy.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/ml.png" alt="Machine Learning">
+        <h3>Machine Learning</h3>
+        <p>Learn to create predictive models and AI applications.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/data.png" alt="Data Visualization">
+        <h3>Data Visualization</h3>
+        <p>Visualize data effectively using charts and graphs.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <!-- Design & UI/UX -->
+    <div class="card">
+        <img src="images/figma.png" alt="Figma">
+        <h3>Figma</h3>
+        <p>Design beautiful interfaces and prototypes using Figma.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/xd.png" alt="Adobe XD">
+        <h3>Adobe XD</h3>
+        <p>Create interactive UI/UX designs with Adobe XD.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+    <div class="card">
+        <img src="images/graphics.png" alt="Graphic Design">
+        <h3>Graphic Design</h3>
+        <p>Learn the basics of visual design and creativity.</p>
+        <button class="enroll-btn">Enroll</button>
+    </div>
+
+</section>
+<section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-card">
+        <img src="images/avtar/John Doe.jpg" alt="Student 1">
+        <h3>John Doe</h3>
+        <p>"The React course was amazing! I built my first web app in just 2 weeks."</p>
+    </div>
+    <div class="testimonial-card">
+        <img src="images/avtar/Jane Smith.jpg" alt="Student 2">
+        <h3>Jane Smith</h3>
+        <p>"Python & Data Science courses helped me land my first data analyst job."</p>
+    </div>
+    <div class="testimonial-card">
+        <img src="images/avtar/Mike Johnson.jpg" alt="Student 3">
+        <h3>Mike Johnson</h3>
+        <p>"Figma and UI/UX courses improved my design skills tremendously."</p>
+    </div>
+</section>
+
+
+        <!-- Courses Table -->
+        <div class="courses-table">
+            <h2>My Courses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Progress</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>80%</td>
+                        <td>Ongoing</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript Basics</td>
+                        <td>50%</td>
+                        <td>Ongoing</td>
+                    </tr>
+                    <tr>
+                        <td>React.js</td>
+                        <td>20%</td>
+                        <td>Ongoing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+<!-- Footer -->
+<footer class="dashboard-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We provide top-quality tech and design courses for students to upskill and succeed in the digital world.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Courses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="images/logo/fb.png" alt="Facebook"></a>
+                <a href="#"><img src="images/logo/tw.png" alt="Twitter"></a>
+                <a href="#"><img src="images/logo/ld.png" alt="LinkedIn"></a>
+                <a href="#"><img src="images/logo/insta.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 YourWebsiteName. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+	
+
+</body>
+</html>

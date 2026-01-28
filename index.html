@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEdu | Learn Technology</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">TechEdu</div>
+        <nav>
+            <ul class="nav-links">
+				<li><a href="#">Home</a></li>
+				<li class="has-mega">
+    <a href="#">Courses ▾</a>
+    <div class="mega-menu">
+        <div class="mega-column">
+            <h3>Web Development</h3>
+            <ul>
+                <li><a href="#">HTML & CSS</a></li>
+                <li><a href="#">JavaScript Basics</a></li>
+                <li><a href="#">React.js</a></li>
+                <li><a href="#">Node.js</a></li>
+                <li><a href="#">Fullstack Projects</a></li>
+            </ul>
+        </div>
+        <div class="mega-column">
+            <h3>Data Science</h3>
+            <ul>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">Pandas & NumPy</a></li>
+                <li><a href="#">Machine Learning</a></li>
+                <li><a href="#">Data Visualization</a></li>
+            </ul>
+        </div>
+        <div class="mega-column">
+            <h3>Design & UI/UX</h3>
+            <ul>
+                <li><a href="#">Figma</a></li>
+                <li><a href="#">Adobe XD</a></li>
+                <li><a href="#">Graphic Design</a></li>
+            </ul>
+        </div>
+    </div>
+</li>
+
+
+
+				<li><a href="#">Tutorials</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><button class="login-btn" id="openModal">Login</button></li>
+			</ul>
+		</nav>
+    </header>
+	<!-- login/signup -->
+		<div class="modal" id="authModal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+
+        <h2 id="modalTitle">Login</h2>
+
+        <form id="loginForm" class="auth-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+			<!-- Forgot password link -->
+    <p class="forgot-password" id="forgotPasswordLink">Forgot Password?</p>
+            <button type="submit" class="btn">Login</button>
+            <p class="auth-text">
+                Don’t have an account?
+                <span class="switch" id="showSignup">Sign up</span>
+            </p>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn">Create Account</button>
+            <p class="auth-text">
+                Already have an account?
+                <span class="switch" id="showLogin">Login</span>
+            </p>
+        </form>
+    </div>
+</div>
+		<!-- Forgot Password Modal -->
+		<div class="forgot-password-modal" id="forgotPasswordModal">
+			<div class="modal-content">
+				<span class="close-modal" id="closeForgot">&times;</span>
+				<h2>Reset Password</h2>
+				<p>Enter your email to reset your password</p>
+				<input type="email" placeholder="Your Email" required>
+				<button id="resetPasswordBtn">Send Reset Link</button>
+			</div>
+		</div>
+
+
+    <!-- Hero Section -->
+	<section class="hero fade-in">
+        <h1>Learn Technology the Smart Way</h1>
+        <p>Free & premium courses on web development, programming and tech skills.</p>
+        <button class="btn">Get Started</button>
+    </section>
+	
+    <!-- Features -->
+    <section class="features reveal">
+        <div class="feature-card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, React</p>
+        </div>
+        <div class="feature-card">
+            <h3>Programming</h3>
+            <p>Python, Java, C++</p>
+        </div>
+        <div class="feature-card">
+            <h3>Career Growth</h3>
+            <p>Projects & Interview Prep</p>
+        </div>
+    </section>
+	<!-- Why Choose TechEdu? -->
+	<section class="why-choose reveal">
+    <h2>Why Choose TechEdu?</h2>
+    <p class="section-desc">
+        Learn in-demand tech skills with practical projects and real-world guidance.
+    </p>
+
+    <div class="why-grid">
+        <div class="why-card">
+            <h3>🎓 Beginner Friendly</h3>
+            <p>No prior experience required. Start from scratch and grow step by step.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>💻 Hands-on Projects</h3>
+            <p>Build real projects that you can showcase in your portfolio.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>🚀 Career Focused</h3>
+            <p>Learn skills that companies actually want.</p>
+        </div>
+    </div>
+</section>
+
+	<!-- learning-path Section-->
+<section class="learning-path reveal">
+    <h2>Your Learning Path</h2>
+
+    <div class="path-steps">
+        <div class="step">
+            <span>01</span>
+            <h3>Start with Basics</h3>
+            <p>HTML, CSS & programming fundamentals.</p>
+        </div>
+
+        <div class="step">
+            <span>02</span>
+            <h3>Build Projects</h3>
+            <p>Create websites, apps, and real-world solutions.</p>
+        </div>
+
+        <div class="step">
+            <span>03</span>
+            <h3>Advance Skills</h3>
+            <p>JavaScript frameworks, backend & APIs.</p>
+        </div>
+
+        <div class="step">
+            <span>04</span>
+            <h3>Get Job Ready</h3>
+            <p>Portfolio, interview prep & career guidance.</p>
+        </div>
+    </div>
+</section>
+	<!-- student Stats /Motivation Section -->
+	<section class="stats reveal">
+    <div class="stat-box">
+        <h3>10K+</h3>
+        <p>Students Learning</p>
+    </div>
+    <div class="stat-box">
+        <h3>50+</h3>
+        <p>Tech Courses</p>
+    </div>
+    <div class="stat-box">
+        <h3>100+</h3>
+        <p>Real Projects</p>
+    </div>
+    <div class="stat-box">
+        <h3>95%</h3>
+        <p>Student Satisfaction</p>
+    </div>
+</section>
+
+   <!-- Footer -->
+<footer class="dashboard-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We provide top-quality tech and design courses for students to upskill and succeed in the digital world.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Courses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="{{ url_for('static', filename='images/logo/fb.png') }}" alt="Facebook"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/logo/tw.png') }}" alt="Twitter"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/logo/ld.png') }}" alt="LinkedIn"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/logo/insta.png') }}" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 YourWebsiteName. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
